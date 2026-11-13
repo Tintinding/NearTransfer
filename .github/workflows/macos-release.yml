@@ -1,0 +1,37 @@
+name: macOS Release build
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          channel: stable
+          flutter-version: '3.50.0'
+      - name: Prepare Flutter dependencies and localizations
+        run: |
+          flutter pub get --enforce-lockfile
+          flutter gen-l10n
+      - name: Compile macOS Release
+        run: flutter build macos --release --no-pub
+      - name: Archive the app bundle
+        run: |
+          app=build/macos/Build/Products/Release/NearTransfer.app
+          lipo -archs "$app/Contents/MacOS/NearTransfer"
+          ditto -c -k --sequesterRsrc --keepParent "$app" "$RUNNER_TEMP/NearTransfer-macOS-build.zip"
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: NearTransfer-macOS-Release
+          path: ${{ runner.temp }}/NearTransfer-macOS-build.zip
+          if-no-files-found: error

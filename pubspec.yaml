@@ -1,0 +1,24 @@
+name: near_transfer
+description: Local network file transfer for Windows, Android, macOS, iOS, and iPadOS.
+publish_to: none
+version: 1.0.0+1
+environment:
+  sdk: ^3.14.0
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.3
+  material_ui: ^1.1.0
+  basic_utils: ^5.8.2
+  bonsoir: ^7.1.6
+  crypto: ^3.0.8
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mdns_dart: ^2.2.2
+flutter:
+  generate: true
+  uses-material-design: true

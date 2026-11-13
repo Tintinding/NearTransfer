@@ -1,0 +1,6 @@
+{
+  "string": [
+    { "name": "app_name", "value": "近传" },
+    { "name": "app_description", "value": "在同一局域网内发现设备并直接收发文件。" }
+  ]
+}

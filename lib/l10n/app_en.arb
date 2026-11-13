@@ -1,0 +1,233 @@
+{
+  "@@locale": "en",
+  "appName": "NearTransfer",
+  "language": "Language",
+  "languageSaveFailed": "Could not save the language setting.",
+  "sendFiles": "Send files",
+  "receiveFiles": "Receive files",
+  "receiveHint": "Keep the app open to receive requests from nearby devices.",
+  "sendHint": "Select your files and a nearby device, then tap Send.",
+  "recheck": "Check again",
+  "filesToSend": "Files to send",
+  "choosing": "Selecting files…",
+  "chooseFiles": "Choose files",
+  "pickerTitle": "Choose files to send",
+  "chooseWindowsHint": "Select multiple files or drag them in from File Explorer",
+  "chooseSystemFilesHint": "Choose one or more files from your device",
+  "removeFile": "Remove {name}",
+  "@removeFile": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "addFiles": "Add files",
+  "nearbyDevices": "Nearby devices",
+  "onlineCount": "{count} online",
+  "@onlineCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noPeers": "Open NearTransfer on both devices and connect them to the same local network.",
+  "localDevice": "Local network device",
+  "knownDevice": "Transferred before",
+  "noFiles": "No files selected",
+  "noRecipient": "No recipient selected",
+  "sendTo": "Send to {name}",
+  "@sendTo": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "send": "Send",
+  "awaitingOffers": "Waiting for a transfer request",
+  "receiverOffline": "Receiving is not ready",
+  "offerHint": "You can accept or decline an incoming transfer.",
+  "incomingRequest": "Incoming file request",
+  "decline": "Decline",
+  "accept": "Accept",
+  "popupAccept": "Accept",
+  "viewOffer": "View details",
+  "closePopup": "Dismiss request alert",
+  "receivedFrom": "From {name}",
+  "@receivedFrom": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTransfer": "Cancel transfer",
+  "openDownloads": "Open Downloads",
+  "savedLocation": "Show save location",
+  "checkingFile": "Verifying {name}",
+  "@checkingFile": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "unknownResult": "Some results are unknown",
+  "unknownResultHint": "Check the saved files on the receiving device to avoid sending duplicates.",
+  "sendOtherFiles": "Send other files",
+  "checkResult": "Check delivery",
+  "retryFiles": "Retry failed files",
+  "progress": "Transfer progress",
+  "savedCount": "{count} of {total} files confirmed saved",
+  "@savedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "filePending": "Pending",
+  "fileSaved": "Saved · {size}",
+  "@fileSaved": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "openFile": "Open {name}",
+  "@openFile": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "revealFile": "Show {name} in File Explorer",
+  "@revealFile": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "retryConfirmTitle": "Have you checked the received files?",
+  "retryConfirmHint": "NearTransfer will check again. If delivery is still unconfirmed, those files will be resent and may create duplicates on the receiving device.",
+  "back": "Back",
+  "retryConfirmed": "Checked, retry now",
+  "downloads": "Downloads",
+  "downloadsPath": "Files app › Downloads",
+  "exportFile": "Export {name}",
+  "@exportFile": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "iosReceivedPath": "Files app › Browse › On My iPhone or On My iPad › 近传 › Received",
+  "openFailedIos": "Could not open the file. Check whether it is still in the 近传 folder in the Files app.",
+  "previewUnsupported": "This file type cannot be previewed. Export it to open it in an app that supports the format.",
+  "exportFailed": "Could not export the file. Check whether it is still available, then try again.",
+  "errorNetworkPermissionIos": "Allow 近传 under Settings › Privacy & Security › Local Network, then check again.",
+  "errorDiscoveryIos": "Could not discover nearby devices. Check the local connection and the Local Network permission, then try again.",
+  "errorNoSpaceIos": "Device storage is low. Free up space and try again.",
+  "errorSaveIos": "Could not save the file. Check available space on the receiving device, then try again.",
+  "close": "Close",
+  "waitingConsent": "Waiting for confirmation",
+  "sending": "Sending",
+  "receiving": "Receiving",
+  "recipientDeclined": "Recipient declined",
+  "offerDeclined": "Request declined",
+  "transferCanceled": "Transfer canceled",
+  "transferExpired": "Transfer timed out",
+  "sendComplete": "Files sent",
+  "receiveComplete": "Files received",
+  "partlySaved": "Some files were saved",
+  "transferFailed": "Transfer incomplete",
+  "trayOpen": "Open NearTransfer",
+  "trayPick": "Choose files to send…",
+  "trayReceive": "View incoming requests",
+  "trayExit": "Exit NearTransfer",
+  "restoreFailed": "Could not read the last transfer result. Check the files on the receiving device.",
+  "dropWhilePicking": "Finish choosing files before dragging in more.",
+  "dropWhileBusy": "Wait for the current transfer to finish before dragging in files.",
+  "selectionCanceled": "File selection canceled.",
+  "moreIssues": "{count, plural, one{1 more item was not added.} other{{count} more items were not added.}}",
+  "@moreIssues": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "resultUnavailable": "Delivery could not be confirmed. Check the saved files on the receiving device.",
+  "checkBeforeRetry": "Check the files on the receiving device before resending.",
+  "openFailedWindows": "Could not open the file. Check whether it was moved and whether Windows has an app for this file type.",
+  "openFailedAndroid": "Could not open the file. Look in Downloads in the Files app.",
+  "revealFailed": "Could not locate the file in File Explorer. Check whether it was moved or deleted.",
+  "downloadsFailedWindows": "Could not open Downloads. Check its location in File Explorer.",
+  "downloadsFailedAndroid": "Open the Files app and go to Downloads.",
+  "errorAlreadyRunning": "NearTransfer is already open. Switch to the running window.",
+  "errorNetworkPermissionWindows": "Could not read the network interfaces. Check your connection and try again.",
+  "errorNetworkPermissionAndroid": "Could not access the local network. Check local network permissions in system settings.",
+  "errorStartup": "NearTransfer could not start. Check that device storage is available and try again.",
+  "errorNoNetworkWindows": "Connect via Wi-Fi or Ethernet and put both devices on the same local network.",
+  "errorNoNetworkAndroid": "Connect to Wi-Fi and put both devices on the same local network.",
+  "errorDiscoveryWindows": "Could not discover nearby devices. Check the local network and Windows Firewall, then try again.",
+  "errorDiscoveryAndroid": "Could not start device discovery. Check Wi-Fi and try again.",
+  "errorOfflineWindows": "Could not confirm the other device is online. Keep both apps open and check the local network and inbound Windows Firewall rules.",
+  "errorOfflineAndroid": "Could not confirm the other device is online. Open NearTransfer on both devices and check that they share a local network.",
+  "errorCertificate": "Could not verify the device certificate. Confirm the recipient’s identity, then select the device again.",
+  "errorPicker": "Could not open the file picker. Try again or drag files from File Explorer.",
+  "pickerFailedSystem": "Could not open the file picker. Try again.",
+  "macLocalNetworkHint": "If macOS asks, allow NearTransfer to access the local network. On macOS 15 or later, enable NearTransfer in System Settings → Privacy & Security → Local Network, then check again.",
+  "macNoNetwork": "Connect this Mac and the other device to the same Wi-Fi or Ethernet network, then check again.",
+  "macOffline": "Keep both apps open on the same local network. Check Local Network access and allow incoming connections for NearTransfer in Firewall Options.",
+  "macOpenFailed": "Could not open the file. Check whether it was moved and whether your Mac has an app for this file type.",
+  "macRevealFailed": "Could not show the file in Finder. Check whether it was moved or deleted.",
+  "macDownloadsFailed": "Could not open Downloads. Check the Downloads folder in Finder.",
+  "macRevealFile": "Show {name} in Finder",
+  "@macRevealFile": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "errorFolder": "Open the folder and select the files inside it.",
+  "errorSourceMissing": "The file was moved or deleted. Select it again.",
+  "errorSourcePermission": "Could not read the file. Check access permissions.",
+  "errorSourceRead": "Could not read the whole file. Choose a local copy or download it from the cloud first.",
+  "errorFileLimit": "The file list is too large or unavailable. Select up to 128 files at a time.",
+  "errorNoSpace": "The receiving device is low on storage. Free up space and try again.",
+  "errorSave": "Could not save the file. Check available space and write permissions for Downloads on the receiving device.",
+  "errorIntegrity": "File verification failed. Select the file again or retry.",
+  "errorBusy": "The device is handling another transfer. Try again later.",
+  "errorTimeout": "Confirmation or connection timed out. Keep both apps open and try again.",
+  "errorCanceled": "Canceled. Files already saved are kept.",
+  "errorDeclined": "The recipient declined the request.",
+  "errorTransfer": "The transfer could not finish. Check the local network and whether the PC allows incoming connections to NearTransfer.",
+  "incomingOffer": "{name} wants to send {summary}",
+  "fileCount": "{count, plural, one{1 file} other{{count} files}}",
+  "@incomingOffer": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "summary": {
+        "type": "String"
+      }
+    }
+  },
+  "@fileCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
+}

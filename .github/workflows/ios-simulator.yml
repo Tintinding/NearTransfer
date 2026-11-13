@@ -1,0 +1,57 @@
+name: iOS Simulator
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-26
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      FLUTTER_VERSION: 3.50.0
+      FLUTTER_REVISION: ab2912035e160d9cad6306df307576da6128ebdb
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Flutter and verify Xcode
+        run: |
+          xcodebuild -version
+          xcrun --sdk iphonesimulator --show-sdk-version
+          git clone --depth 1 --branch "$FLUTTER_VERSION" https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
+          test "$(git -C "$RUNNER_TEMP/flutter" rev-parse HEAD)" = "$FLUTTER_REVISION"
+          "$RUNNER_TEMP/flutter/bin/flutter" --version
+          "$RUNNER_TEMP/flutter/bin/flutter" precache --ios
+          echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
+
+      - name: Analyze and test
+        run: |
+          flutter pub get --enforce-lockfile
+          flutter gen-l10n
+          flutter analyze --no-pub
+          flutter test --no-pub
+
+      - name: Build iPhone and iPad simulator app
+        run: |
+          flutter build ios --simulator --debug --no-codesign --no-pub
+          app="build/ios/iphonesimulator/Runner.app"
+          test -x "$app/Runner"
+          test "$(/usr/libexec/PlistBuddy -c 'Print UIDeviceFamily:0' "$app/Info.plist")" = 1
+          test "$(/usr/libexec/PlistBuddy -c 'Print UIDeviceFamily:1' "$app/Info.plist")" = 2
+          ditto -c -k --keepParent "$app" "$RUNNER_TEMP/NearTransfer-iOS-Simulator-arm64.zip"
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          path: ${{ runner.temp }}/NearTransfer-iOS-Simulator-arm64.zip
+          archive: false
+          if-no-files-found: error
+          retention-days: 14
