@@ -8,22 +8,27 @@ const pages = [
   {
     file: 'README.md',
     unfinished: /尚无成品.*自行打包并验证/,
+    rebuilt: /整合后的源码重新构建/,
   },
   {
     file: 'docs/README.en.md',
     unfinished: /No finished app is available.*build and validate/,
+    rebuilt: /rebuilt from the integrated source/,
   },
   {
     file: 'docs/README.ja.md',
     unfinished: /完成版はありません.*ビルドと検証が必要/,
+    rebuilt: /統合後のソースから再ビルド/,
   },
   {
     file: 'docs/README.fr.md',
     unfinished: /Aucune application finalisée.*compiler et les vérifier vous-même/,
+    rebuilt: /reconstruites à partir du code intégré/,
   },
   {
     file: 'docs/README.es.md',
     unfinished: /Aún no hay una aplicación terminada.*compiles y valides por tu cuenta/,
+    rebuilt: /compilado de nuevo a partir del código integrado/,
   },
 ];
 const pagePaths = pages.map(({ file }) => path.join(root, file)).sort();
@@ -48,6 +53,7 @@ test('every introduction links to all five languages', () => {
 test('each introduction describes the same release and unfinished platforms', () => {
   for (const page of pages) {
     const content = fs.readFileSync(path.join(root, page.file), 'utf8');
+    assert.match(content, page.rebuilt, page.file);
     for (const platform of ['iOS / iPadOS', 'macOS', 'HarmonyOS NEXT']) {
       const row = content.split('\n').find((line) => line.startsWith(`| ${platform} |`));
       assert.ok(row, `${page.file} is missing ${platform}`);

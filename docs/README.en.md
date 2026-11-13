@@ -29,7 +29,7 @@ NearTransfer is a local-network file transfer tool. Connect your devices to the 
 | macOS | No finished app is available. The design and experimental source are provided for you to build and validate. [Development and validation](../技术方案/macOS开发与验收.md) |
 | HarmonyOS NEXT | No finished app is available. The design and experimental source are provided for you to build and validate. [Development and validation](../技术方案/HarmonyOS开发与验收.md) |
 
-The Windows and Android packages are previews built before the other platforms were integrated into the source tree. Windows and Android have been tested transferring files in both directions. The release APK still needs device acceptance testing, along with additional device and network coverage. [Release page](https://github.com/Tintinding/NearTransfer/releases/tag/v1.0.0-preview)
+The Windows and Android preview packages were rebuilt from the integrated source. Earlier Windows and Android builds transferred photos and documents in both directions. The rebuilt APK still needs device acceptance testing, along with additional device and network coverage. [Release page](https://github.com/Tintinding/NearTransfer/releases/tag/v1.0.0-preview)
 
 ## Get started
 

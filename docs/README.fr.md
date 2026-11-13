@@ -29,7 +29,7 @@ NearTransfer permet de transférer des fichiers sur un réseau local. Connectez 
 | macOS | Aucune application finalisée n'est disponible. Le principe et le code expérimental sont fournis pour que vous puissiez les compiler et les vérifier vous-même. [Développement et validation](../技术方案/macOS开发与验收.md) |
 | HarmonyOS NEXT | Aucune application finalisée n'est disponible. Le principe et le code expérimental sont fournis pour que vous puissiez les compiler et les vérifier vous-même. [Développement et validation](../技术方案/HarmonyOS开发与验收.md) |
 
-Les versions Windows et Android sont des aperçus construits avant l'intégration du code des autres plateformes. Les transferts entre Windows et Android ont été testés dans les deux sens. L'APK de publication doit encore être validé sur appareil, ainsi que sur d'autres appareils et réseaux. [Page de publication](https://github.com/Tintinding/NearTransfer/releases/tag/v1.0.0-preview)
+Les versions d'essai Windows et Android ont été reconstruites à partir du code intégré. Des versions antérieures ont permis de tester le transfert de photos et de documents dans les deux sens entre Windows et Android. L'APK reconstruit doit encore être validé sur appareil, ainsi que sur d'autres appareils et réseaux. [Page de publication](https://github.com/Tintinding/NearTransfer/releases/tag/v1.0.0-preview)
 
 ## Premiers pas
 

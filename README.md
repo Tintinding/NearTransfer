@@ -29,7 +29,7 @@
 | macOS | 尚无成品，仅提供实现原理和实验性源码，需要自行打包并验证。 [开发与验收](技术方案/macOS开发与验收.md) |
 | HarmonyOS NEXT | 尚无成品，仅提供实现原理和实验性源码，需要自行打包并验证。 [开发与验收](技术方案/HarmonyOS开发与验收.md) |
 
-Windows 和 Android 安装包为体验版，来自本次整合其他平台源码之前的构建。Windows 与 Android 曾进行双向传输测试，发布 APK 的真机验收和更多设备、网络场景仍待验证。 [发布页](https://github.com/Tintinding/NearTransfer/releases/tag/v1.0.0-preview)
+Windows 和 Android 体验包基于整合后的源码重新构建。此前 Windows 与 Android 曾双向传输照片和文档，新构建的 APK 尚未在真机验收，更多设备和网络场景仍待验证。 [发布页](https://github.com/Tintinding/NearTransfer/releases/tag/v1.0.0-preview)
 
 ## 开始使用
 

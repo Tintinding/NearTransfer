@@ -29,7 +29,7 @@ NearTransfer は、ローカルネットワーク上でファイルを転送す�
 | macOS | 完成版はありません。実装の考え方と実験的なソースを提供しており、ご自身でビルドと検証が必要です。 [開発と検証](../技术方案/macOS开发与验收.md) |
 | HarmonyOS NEXT | 完成版はありません。実装の考え方と実験的なソースを提供しており、ご自身でビルドと検証が必要です。 [開発と検証](../技术方案/HarmonyOS开发与验收.md) |
 
-Windows と Android のパッケージは、他のプラットフォームのソースを統合する前に作成したプレビュー版です。Windows と Android 間の双方向転送はテスト済みです。リリース APK の実機受け入れテストと、より多くの端末・ネットワークでの検証は今後必要です。 [リリースページ](https://github.com/Tintinding/NearTransfer/releases/tag/v1.0.0-preview)
+Windows と Android のプレビュー版は、統合後のソースから再ビルドしました。以前の版では、Windows と Android の間で写真と文書の双方向転送をテストしました。再ビルドした APK の実機受け入れテストと、より多くの端末・ネットワークでの検証は今後必要です。 [リリースページ](https://github.com/Tintinding/NearTransfer/releases/tag/v1.0.0-preview)
 
 ## 使い方
 
